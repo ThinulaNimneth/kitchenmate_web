@@ -3,13 +3,18 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks"
 import { removeToast } from "../../store/slices/uiSlice"
 import type { Toast } from "../../store/slices/uiSlice"
 
+
+
 const styles: Record<Toast["type"], string> = {
   success: "border-emerald-200 bg-emerald-50 text-emerald-800",
   error: "border-red-200 bg-red-50 text-red-800",
   info: "border-sky-200 bg-sky-50 text-sky-800"
 }
 
+
+
 const icons: Record<Toast["type"], string> = { success: "✓", error: "!", info: "i" }
+
 
 function ToastItem({ toast }: { toast: Toast }) {
   const dispatch = useAppDispatch()
@@ -39,6 +44,9 @@ function ToastItem({ toast }: { toast: Toast }) {
     </div>
   )
 }
+
+
+
 
 export default function Toaster() {
   const toasts = useAppSelector((s) => s.ui.toasts)
