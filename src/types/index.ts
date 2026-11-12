@@ -1,11 +1,12 @@
 export type  UserRole = "ADMIN" | "USER"
 
 export interface User {
-    id: string
-    name: string
-    email: string
-    roles: UserRole[]
-    isActive: string
+  id: string
+  name: string
+  email: string
+  roles: UserRole[]
+  isActive: boolean
+  createdAt: string
 }
 
 export interface AuthPayload{
